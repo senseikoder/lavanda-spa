@@ -1,0 +1,128 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+---
+
+<Layout title="Lavanda Spa">
+	<main>
+		<section class="section banner">
+			<div class="overlay"></div>
+
+			<div class="container">
+				<!-- <figure class="image">
+					<img src="img/logo" alt="Logo SPA" width="300" height="200" />
+				</figure> -->
+
+				<h1 class="text-white">Lavanda Spa</h1>
+			</div>
+		</section>
+
+		<section class="section">
+			<div class="centered">
+				<figure class="image">
+					<img src="img/logo-lavanda-spa.jpg" alt="Logo SPA" width="410" />
+				</figure>
+			</div>
+		</section>
+
+		<section class="section">
+			<div class="container">
+				<div role="list" class="link-card-grid">
+					<Card
+						src="/img/manicure-semipermanente.jpg"
+						title="Manicure Semipermanente"
+						price="5"
+					/>
+					<Card
+						src="/img/manicure+rubber.jpg"
+						title="Manicure + Rubber"
+						price="7"
+					/>
+					<Card
+						src="img/sistema-jelly-tips.jpg"
+						title="Sistema de Jelly tips"
+						price="10"
+					/>
+					<Card
+						src="/img/manicure+kapping.jpg"
+						title="Manicure + Kapping"
+						price="7"
+					/>
+					<Card
+						src="/img/sistema-acrilicas.jpg"
+						title="Sistema de Uñas Acrílicas"
+						price="15"
+					/>
+					<Card
+						src="/img/sistema-poly-gel.jpg"
+						title="Sistema de Poly Gel"
+						price="15"
+					/>
+					<Card
+						src="/img/pedicure-semipermanente.jpg"
+						title="Pedicura semipermanente"
+						price="7"
+					/>
+					<Card
+						src="/img/manicure+pedicure-semipermanente.jpg"
+						title="Manicure y Pedicure Semipermanente"
+						price="10"
+					/>
+				</div>
+
+			</div>
+
+			<br><br>
+
+			<div class="centered">
+				<a href="https://wa.me/584244348563" class="button">
+					Whatsapp 0424-434.85.63</a
+				>
+			</div>
+
+			<br><br>
+		</section>
+	</main>
+</Layout>
+
+<style>
+	.banner {
+		height: 45vh;
+		background-image: url("/img/banner-spa.webp");
+		background-position: center 65%;
+		background-size: cover;
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.overlay {
+		background-color: rgba(75, 19, 154, 0.65);
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 0;
+	}
+
+	.text-white {
+		color: white;
+	}
+
+	.link-card-grid {
+		display: grid;
+		grid-template-columns: repeat(3, minmax(300px, 350px));
+		grid-template-rows: repeat(auto-fit, 1fr);
+		gap: 2rem;
+		padding: 0;
+	}
+	
+
+	@media (max-width: 768px) {
+		.link-card-grid {
+			grid-template-columns: 1fr;
+		}
+	}
+</style>
